@@ -2,7 +2,7 @@ $(document).ready(function () {
     let formatIndex = 0; // 0 = Republican, 1 = regular, 2 = uptime.
 
     const $clock  = $("#clock");
-    const launchDate = new Date(Date.UTC(, , , , ));
+    const launchDate = new Date(Date.UTC(2025, 7, 23, 21, 0));
 
     const republicanMonths = [
         "Vendémiaire", "Brumaire", "Frimaire",
