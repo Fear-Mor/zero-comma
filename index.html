@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/jpeg" href="media/favicon.jpg">
+        <title>Zero Comma</title>
+    </head>
+    <body>
+        <video autoplay muted loop id="background" src="media/background.mp4" oncanplay="this.play()"></video>
+        <div id="nav" class="box">
+            <div class="boxheader">
+                <div class="boxtitle"><p class="title">Inside the Cable Temple</p></div>
+                <div class="iconbox minmax" data-original="icons/minimise.png" data-active="icons/maximise.png"><img src="icons/minimise.png" alt="min/max box" class="icon"></div>
+            </div>
+            <div class="boxbody">
+                <ul id="windowlist" class="minibox"><p id="windowlisttitle" class="miniboxtitle">Closed windows</p></ul>
+                <ul class="minibox">
+                    <p class="miniboxtitle">Social links</p>
+                    <li><a href="https://rateyourmusic.com/~Fear_Mor_" target="_blank">Rate Your Music</a></li>
+                    <li><a href="https://www.last.fm/user/Fear_Mor_" target="_blank">Last.fm</a></li>
+                    <li><a href="https://letterboxd.com/Fear_Mor_/" target="_blank">Letterboxd</a></li>
+                    <li><a href="https://www.serializd.com/user/FearMor/profile" target="_blank">Serializd</a></li>
+                    <li><a href="https://anilist.co/user/FearMor/" target="_blank">AniList</a></li>
+                    <li><a href="https://backloggd.com/u/Fear_Mor_/" target="_blank">Backloggd</a></li>
+                </ul>
+                <ul id="contact" class="minibox">
+                    <p class="miniboxtitle">Contact</p>
+                    <li>Discord: @fear_mor_</li>
+                    <li><a href="mailto:fearmor@zerocomma.net">fearmor@zerocomma.net</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main" class="box" data-title="Main window >>">
+            <div class="boxheader">
+                <div class="iconbox close" data-box="main"><img src="icons/close.png" alt="close box" class="icon"></div>
+                <div class="boxtitle"><p class="title">El Jardín de los Presentes</p></div>
+                <div class="iconbox minmax" data-original="icons/minimise.png" data-active="icons/maximise.png"><img src="icons/minimise.png" alt="min/max box" class="icon"></div>
+                <div class="iconbox pinunpin" data-original="icons/pin.png" data-active="icons/unpin.png"><img src="icons/pin.png" alt="pin/unpin box" class="icon"></div>
+            </div>
+            <div class="boxbody">
+                <img id="mainimg" src="media/reimanga.webp" alt="Rei from Evangelion manga">
+                <div>
+                    <div id="toprow"> <div id="welcome">Welcome to the world of Zero Comma!</div><div id="clock"></div></div>
+                    <div id="bottomrow">
+                        <div id="about" class="minibox"><div class="miniboxtitle">About</div><p>Here you'll find links to my various spots on the World Wide Web. I'll be changing the playlist depending on whatever songs are on my mind at the moment.</p></div>
+                        <div id="proverb" class="minibox">
+                            <div class="miniboxtitle">Kakugen</div>
+                            <p>
+                                <span id="romaji"></span><br>
+                                <span id="japanese"></span><br>
+                                <span id="english"></span>
+                            </p>
+                            <div id="shogipiececontainer"><img id="shogipiece" src="media/keima.svg" alt="Shogi piece"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="video" class="box creambox" data-title="Video window >>">
+            <div class="boxheader">
+                <div class="iconbox close" data-box="video"><img src="icons/close.png" alt="close box" class="icon"></div>
+                <div class="boxtitle"><p class="title">In the Court of the Crimson King</p></div>
+                <div class="iconbox minmax" data-original="icons/minimise.png" data-active="icons/maximise.png"><img src="icons/minimise.png" alt="min/max box" class="icon"></div>
+                <div class="iconbox pinunpin" data-original="icons/pin.png" data-active="icons/unpin.png"><img src="icons/pin.png" alt="pin/unpin box" class="icon"></div>
+            </div>
+            <div class="boxbody">
+                <iframe width="600" height="337" src="https://www.youtube.com/embed/e1pZIfretEs" title="toe - グッドバイ / Goodbye" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div id="credits" class="box creambox" data-title="Credits window >>">
+            <div class="boxheader">
+                <div class="iconbox close" data-box="credits"><img src="icons/close.png" alt="close box" class="icon"></div>
+                <div class="boxtitle"><p class="title">World Is Yours</p></div>
+                <div class="iconbox minmax" data-original="icons/minimise.png" data-active="icons/maximise.png"><img src="icons/minimise.png" alt="min/max box" class="icon"></div>
+                <div class="iconbox pinunpin" data-original="icons/pin.png" data-active="icons/unpin.png"><img src="icons/pin.png" alt="pin/unpin box" class="icon"></div>
+            </div>
+            <div class="boxbody">
+                <div class="minibox">
+                    <span class="miniboxtitle">Buttons</span>
+                    <div id="buttons">
+                        <a href="https://www.firefox.com" target="_blank"><img src="media/firefox.jpg" alt="Use Firefox"></a>
+                        <a href="https://en.wikipedia.org/wiki/UBlock_Origin" target="_blank"><img src="media/ublockorigin.png" alt="Use uBlock Origin"></a>
+                        <img src="media/lain.webp" alt="Serial Experiments Lain">
+                        <a href="https://www.youtube.com/watch?v=cWGE9Gi0bB0" target="_blank"><img src="media/wishyouwerehere.png" alt="Wish You Were Here"></a>
+                        <a href="https://www.youtube.com/watch?v=3M_Gg1xAHE4" target="_blank"><img src="media/pyramidsong.jpg" alt="Pyramid Song"></a>
+                    </div>
+                    <p><img src="media/ireland.gif" alt="Ireland"><img src="media/europe.gif" alt="Europe"><img src="media/unitednations.gif" alt="United Nations"></p>
+                </div>
+                <div id="creditsminibox" class="minibox">
+                    <span id="togglecredits" class="miniboxtitle">Credits⮞</span>
+                    <ul>
+                        <li>‣ General theming based on <a href="https://www.openttd.org/" target="_blank">OpenTTD</a>.</li>
+                        <li>‣ Fonts created by <a href="https://www.openttd.org/news/2024/02/17/openttd-truetype-fonts" target="_blank">Zephyris</a> for OpenTTD.</li>
+                        <li>‣ Background is from <a href="https://www.tt-forums.net/viewtopic.php?t=91448" target="_blank">Plus C's</a> winning entry for OpenTTD 14.</li>
+                        <li>‣ Rei image from Stage 14 of the Evangelion manga. Honestly no idea who coloured it, can't find the original.</li>
+                        <li>‣ Shogi pieces created by <a href="https://commons.wikimedia.org/wiki/User:13xforever/Shogi_Pieces" target="_blank">13xforever</a> on Wikimedia Commons. Blank piece created by me from the ōshō.</li>
+                        <li>‣ Shogi kakugen taken from <a href="http://www.shogi.net/shogivocab/shv10.htm" target="_blank">this</a> list on <a href="http://www.shogi.net/shogi.html" target="_blank">Shogi.Net</a>.</li>
+                        <li>‣ Created using KDE's <a href="https://kate-editor.org/en-gb/" target="_blank">Kate</a> editor.</li>
+                        <li>‣ All contributors to <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> will be reincarnated as lotus flowers.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="player" class="box" data-title="Music player >>">
+            <div class="boxheader">
+                <div class="iconbox close" data-box="player"><img src="icons/close.png" alt="close box" class="icon"></div>
+                <div class="boxtitle"><p class="title">-Feedbacker-</p></div>
+                <div class="iconbox minmax" data-original="icons/minimise.png" data-active="icons/maximise.png"><img src="icons/minimise.png" alt="min/max box" class="icon"></div>
+                <div class="iconbox pinunpin" data-original="icons/pin.png" data-active="icons/unpin.png"><img src="icons/pin.png" alt="pin/unpin box" class="icon"></div>
+            </div>
+            <div class="boxbody">
+                <div id="controls">
+                    <div id="prevtrack" class="iconbox"><img src="icons/prevsong.png" class="icon"></div>
+                    <div id="nexttrack" class="iconbox"><img src="icons/nextsong.png" class="icon"></div>
+                    <div id="stoptrack" class="iconbox"><img src="icons/pausesong.png" class="icon"></div>
+                    <div id="playtrack" class="iconbox"><img src="icons/playsong.png" class="icon"></div>
+                    <div id="sliders" class="playerblock">
+                        <div>
+                            <label for="volumebar">Music Volume</label>
+                            <input type="range" min="0" max="100" id="volumebar">
+                        </div>
+                        <div>
+                            <label for="uselessbar" title="It's for effects in OpenTTD but it does nothing here.">Pointless Slider</label>
+                            <input type="range" min="0" max="100" id="uselessbar">
+                        </div>
+                    </div>
+                </div>
+                <div id="trackinfo" class="playerblock">
+                    <div id="random" class="infobuttons"><span class="marginpixel">Random</span></div>
+                    <div id="trackbox">
+                        <span>Track</span>
+                        <span id="tracknamelabel">Title/Artist</span>
+                        <div id="trackblackbox" class="playerblock">
+                            <span id="tracknum">--</span>
+                            <div id="tracknamecontainer">
+                                <span id="trackname">------</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="toggleplaylist" class="infobuttons"><span class="marginpixel">Playlist</span></div>
+                </div>
+                <audio id="audioelement"></audio>
+                <div id="progressbox" class="playerblock"><span id="currenttime">-:--</span><input type="range" min="0" max="100" value="0" id="progressbar"><span id="totaltime">-:--</span></div>
+            </div>
+        </div>
+        <div id="playlistwindow" class="box">
+            <div class="boxheader">
+                <div class="iconbox close" data-box="playlistwindow"><img src="icons/close.png" alt="close box" class="icon"></div>
+                <div class="boxtitle"><p class="title">Revolver</p></div>
+                <div class="iconbox minmax" data-original="icons/minimise.png" data-active="icons/maximise.png"><img src="icons/minimise.png" alt="min/max box" class="icon"></div>
+            </div>
+            <div class="boxbody">
+                <span id="playlistheadings"><span id="headingnum">No.</span><span id="headingtitle">Title</span><span id="headingartist">Artist</span></span>
+                <div id="playlistbox"><div id="playlist"></div></div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                $(".box").draggable({
+                    handle: ".boxtitle",
+                    stack: ".box",
+                    addClasses: false
+                });
+
+                // Because of how different browsers handle styling, the name label is off by 1 pixel on non-Firefox browsers.
+                if (!navigator.userAgent.includes("Firefox")) {
+                    $("#tracknamelabel").css("margin-top", "0px");
+                }
+            });
+        </script>
+        <script src="scripts/toggleIcon.js"></script>
+        <script src="scripts/musicPlayer.js"></script>
+        <script src="scripts/dateAndTime.js"></script>
+        <script src="scripts/shogiProverbs.js"></script>
+    </body>
+</html>
