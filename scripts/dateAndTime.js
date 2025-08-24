@@ -92,23 +92,39 @@ $(document).ready(function () {
 
     function liveTime(date) {
         let diff = date - launchDate;
+        let tempDate = new Date(launchDate.getTime());
+        // tempDate is used to incrementally adjust each unit, preventing the live time from overshooting.
 
-        let years = date.getFullYear() - launchDate.getFullYear();
-        let months = date.getMonth() - launchDate.getMonth();
-        let days = date.getDate() - launchDate.getDate();
-        const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
-        const minutes = Math.floor(diff / (1000 * 60)) % 60;
-
-        // If current date is earlier in month than launch, gets previous month and adds that many days to make it positive.
-        if (days < 0) {
-            months--;
-            const prevMonthDays = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
-            days += prevMonthDays;
+        let years = date.getFullYear() - tempDate.getFullYear();
+        tempDate.setFullYear(tempDate.getFullYear() + years);
+        if (tempDate > date) {
+            years--;
+            tempDate.setFullYear(tempDate.getFullYear() - 1);
         }
 
-        if (months < 0) {
-            years--;
-            months += 12;
+        let months = date.getMonth() - tempDate.getMonth();
+        tempDate.setMonth(tempDate.getMonth() + months);
+        if (tempDate > date) {
+            months--;
+            tempDate.setMonth(tempDate.getMonth() - 1);
+        }
+
+        let days = date.getDate() - tempDate.getDate();
+        tempDate.setDate(tempDate.getDate() + days);
+        if (tempDate > date) {
+            days--;
+            tempDate.setDate(tempDate.getDate() - 1);
+        }
+
+        let hours = date.getHours() - tempDate.getHours();
+        let minutes = date.getMinutes() - tempDate.getMinutes();
+        if (minutes < 0) {
+            minutes += 60;
+            hours--;
+        }
+        if (hours < 0) {
+            hours += 24;
+            days--;
         }
 
         const parts = [

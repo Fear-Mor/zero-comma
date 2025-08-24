@@ -188,8 +188,9 @@ ul { list-style-type: none; }
   text-shadow: 2px 2px #101010;
 }
 
+#clockbox { margin-left: 40px; }
+
 #clock {
-  text-indent: 40px;
   color: #7bc2fb;
   text-shadow: 2px 2px #101010;
   cursor: pointer;
