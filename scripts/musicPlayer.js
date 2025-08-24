@@ -207,20 +207,25 @@ $(document).ready(function () {
 
             const playerOffset = $player.offset();
             const playerWidth = $player.outerWidth();
+            const playerHeight = $player.outerHeight();
             const playlistWidth = $playlistWindow.outerWidth();
             const windowWidth = $(window).width();
 
             let leftPosition;
+            let topPosition = playerOffset.top - 5;
 
             if (playerOffset.left + playerWidth + playlistWidth + 10 <= windowWidth) {
                 leftPosition = playerOffset.left + playerWidth + 5;
-            } else {
+            } else if (playerOffset.left - playlistWidth - 15 >= 0) {
                 leftPosition = playerOffset.left - playlistWidth - 15;
+            } else {
+                leftPosition = playerOffset.left + (playerWidth / 2) - (playlistWidth / 2) - 5;
+                topPosition = playerOffset.top + playerHeight + 10;
             }
 
             $playlistWindow.css({
                 position: "absolute",
-                top: playerOffset.top - 5,
+                top: topPosition,
                 left: leftPosition
             });
 
