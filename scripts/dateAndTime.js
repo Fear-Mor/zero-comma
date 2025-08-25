@@ -91,49 +91,19 @@ $(document).ready(function () {
     }
 
     function liveTime(date) {
-        let diff = date - launchDate;
-        let tempDate = new Date(launchDate.getTime());
-        // tempDate is used to incrementally adjust each unit, preventing the live time from overshooting.
+        // I was arsing around for so long trying to get this shit to work myself when I could've just been using Luxon.
+        const launchDateLuxon = luxon.DateTime.fromJSDate(launchDate, { zone: 'utc' });
+        const now = luxon.DateTime.fromJSDate(date);
 
-        let years = date.getFullYear() - tempDate.getFullYear();
-        tempDate.setFullYear(tempDate.getFullYear() + years);
-        if (tempDate > date) {
-            years--;
-            tempDate.setFullYear(tempDate.getFullYear() - 1);
-        }
+        const diff = now.diff(launchDateLuxon, ["years", "months", "days", "hours", "minutes"]).toObject();
 
-        let months = date.getMonth() - tempDate.getMonth();
-        tempDate.setMonth(tempDate.getMonth() + months);
-        if (tempDate > date) {
-            months--;
-            tempDate.setMonth(tempDate.getMonth() - 1);
-        }
+        let parts = [];
 
-        let days = date.getDate() - tempDate.getDate();
-        tempDate.setDate(tempDate.getDate() + days);
-        if (tempDate > date) {
-            days--;
-            tempDate.setDate(tempDate.getDate() - 1);
-        }
-
-        let hours = date.getHours() - tempDate.getHours();
-        let minutes = date.getMinutes() - tempDate.getMinutes();
-        if (minutes < 0) {
-            minutes += 60;
-            hours--;
-        }
-        if (hours < 0) {
-            hours += 24;
-            days--;
-        }
-
-        const parts = [
-            years > 0 ? `${years}y` : null,
-            months > 0 ? `${months}mo` : null,
-            days > 0 ? `${days}d` : null,
-            hours > 0 ? `${hours}h` : null,
-            (minutes > 0 || parts.length === 0) ? `${minutes}m` : null
-        ].filter(Boolean);
+        if (diff.years > 0) parts.push(`${Math.floor(diff.years)}y`);
+        if (diff.months > 0) parts.push(`${Math.floor(diff.months)}mo`);
+        if (diff.days > 0) parts.push(`${Math.floor(diff.days)}d`);
+        if (diff.hours > 0) parts.push(`${Math.floor(diff.hours)}h`);
+        if (diff.minutes > 0) parts.push(`${Math.floor(diff.minutes)}m`);
 
         let display = "Live for ";
         if (parts.length === 1) {
