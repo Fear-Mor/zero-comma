@@ -69,12 +69,11 @@ $(document).ready(function () {
 
         const republicStart = new Date(1792, 8, 22);
         const dayDiff = Math.floor((localDate - republicStart) / (1000 * 60 * 60 * 24));
-        const republicanYear = Math.floor(dayDiff / 365.2425) + 1;
-
         let equinox = equinoxTable[localDate.getFullYear()];
         if (localDate < equinox) {
             equinox = equinoxTable[localDate.getFullYear() - 1];
         }
+        const republicanYear = equinox.getFullYear() - 1792 + 1;
 
         const daysSinceEquinox = Math.floor((localDate - equinox) / (1000 * 60 * 60 * 24));
         let monthIndex, dayInMonth;
