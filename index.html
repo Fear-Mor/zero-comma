@@ -80,7 +80,7 @@
                     <span class="miniboxtitle">Buttons</span>
                     <div id="buttons">
                         <a href="https://www.firefox.com" target="_blank"><img src="media/firefox.jpg" alt="Use Firefox"></a>
-                        <a href="https://en.wikipedia.org/wiki/UBlock_Origin" target="_blank"><img src="media/ublockorigin.png" alt="Use uBlock Origin"></a>
+                        <a id="randwiki" href="#" target="_blank" title="Go to a random Wiki article I've visited in the last 30 days."><img src="media/wikipedia.jpg" alt="Open Random Wikipedia Article"></a>
                         <img src="media/lain.webp" alt="Serial Experiments Lain">
                         <a href="https://www.youtube.com/watch?v=cWGE9Gi0bB0" target="_blank"><img src="media/wishyouwerehere.png" alt="Wish You Were Here"></a>
                         <a href="https://www.youtube.com/watch?v=3M_Gg1xAHE4" target="_blank"><img src="media/pyramidsong.jpg" alt="Pyramid Song"></a>
@@ -93,8 +93,9 @@
                         <li>‣ General theming based on <a href="https://www.openttd.org/" target="_blank">OpenTTD</a>.</li>
                         <li>‣ Fonts created by <a href="https://www.openttd.org/news/2024/02/17/openttd-truetype-fonts" target="_blank">Zephyris</a> for OpenTTD.</li>
                         <li>‣ Background is from <a href="https://www.tt-forums.net/viewtopic.php?t=91448" target="_blank">Plus C's</a> winning entry for OpenTTD 14.</li>
-                        <li>‣ Rei image from Stage 14 of the Evangelion manga. Honestly no idea who coloured it, can't find the original.</li>
+                        <li>‣ Rei image from Stage 14 of the Evangelion manga.</li>
                         <li>‣ Shogi pieces created by <a href="https://commons.wikimedia.org/wiki/User:13xforever/Shogi_Pieces" target="_blank">13xforever</a> on Wikimedia Commons. Blank piece created by me from the ōshō.</li>
+                        <li>‣ Wikipedia 88x31 created by <a href="https://commons.wikimedia.org/wiki/File:Lemon_wiki_banner2.jpg" target="_blank">Lemon-s</a> on Wikimedia Commons.</li>
                         <li>‣ Shogi kakugen taken from <a href="http://www.shogi.net/shogivocab/shv10.htm" target="_blank">this</a> list on <a href="http://www.shogi.net/shogi.html" target="_blank">Shogi.Net</a>.</li>
                         <li>‣ Created using KDE's <a href="https://kate-editor.org/en-gb/" target="_blank">Kate</a> editor.</li>
                         <li>‣ View source code on <a href="https://github.com/Fear-Mor/zero-comma" target="_blank">GitHub</a>.</li>
@@ -171,6 +172,28 @@
                 if (!navigator.userAgent.includes("Firefox")) {
                     $("#tracknamelabel").css("margin-top", "0px");
                 }
+            });
+        </script>
+        <script>
+            let wikiUrls = null;
+
+            $(document).ready(function () {
+                $.getJSON("media/wikipedia-history.json", function (urls) {
+                    if (Array.isArray(urls) && urls.length > 0) {
+                        wikiUrls = urls;
+                    } else {
+                        wikiUrls = ["https://www.wikipedia.org/"];
+                    }
+                }).fail(function () {
+                    wikiUrls = ["https://www.wikipedia.org/"];
+                });
+            });
+
+            $("#randwiki").on("click", function (e) {
+                e.preventDefault(); // Prevent "#"
+
+                const randomUrl = wikiUrls[Math.floor(Math.random() * wikiUrls.length)];
+                window.open(randomUrl, "_blank");
             });
         </script>
         <script src="scripts/toggleIcon.js"></script>
