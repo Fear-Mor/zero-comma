@@ -1,8 +1,4 @@
 [
-  "https://en.wikipedia.org/wiki/Deep_Impact_(spacecraft)",
-  "https://en.wikipedia.org/wiki/Deliberate_crash_landings_on_extraterrestrial_bodies",
-  "https://en.wikipedia.org/wiki/List_of_spacecraft_intentionally_crashed_into_extraterrestrial_bodies",
-  "https://en.wikipedia.org/wiki/Impactor_(spacecraft)",
   "https://en.wikipedia.org/wiki/Days_of_Heaven",
   "https://en.wikipedia.org/wiki/The_Martian_(film)",
   "https://en.wikipedia.org/wiki/Jeff_Daniels",
@@ -233,7 +229,6 @@
   "https://en.wikipedia.org/wiki/House_of_Keys",
   "https://en.wikipedia.org/wiki/Tynwald",
   "https://en.wikipedia.org/wiki/Tynwald_Day",
-  "https://en.wikipedia.org/wiki/What%27s_Going_On_(album)",
   "https://en.wikipedia.org/wiki/Cosmic_microwave_background",
   "https://en.wikipedia.org/wiki/Discovery_of_cosmic_microwave_background_radiation",
   "https://en.wikipedia.org/wiki/Kerguelen_Islands",
@@ -297,7 +292,6 @@
   "https://en.wikipedia.org/wiki/The_Vision_of_Escaflowne",
   "https://en.wikipedia.org/wiki/Papar",
   "https://en.wikipedia.org/wiki/Dicuil",
-  "https://en.wikipedia.org/wiki/Faroe_Islands",
   "https://en.wikipedia.org/wiki/Vestmanna",
   "https://en.wikipedia.org/wiki/Norse%E2%80%93Gaels",
   "https://en.wikipedia.org/wiki/Great_Ireland",
@@ -321,5 +315,13 @@
   "https://en.wikipedia.org/wiki/Flora_Tristan",
   "https://en.wikipedia.org/wiki/Fidchell",
   "https://en.wikipedia.org/wiki/The_Patriot_Game",
-  "https://en.wikipedia.org/wiki/Patriot_Games_(film)"
+  "https://en.wikipedia.org/wiki/Patriot_Games_(film)",
+  "https://en.wikipedia.org/wiki/What%27s_Going_On_(song)",
+  "https://en.wikipedia.org/wiki/What%27s_Going_On_(album)",
+  "https://en.wikipedia.org/wiki/Faroe_Islands",
+  "https://en.wikipedia.org/wiki/Geography_of_the_Faroe_Islands",
+  "https://en.wikipedia.org/wiki/Su%C3%B0uroy",
+  "https://en.wikipedia.org/wiki/F%C3%A1mjin",
+  "https://en.wikipedia.org/wiki/Kirkjuvatn",
+  "https://en.wikipedia.org/wiki/S%C3%B8rv%C3%A1gsvatn"
 ]
